@@ -10,8 +10,8 @@ class TaskForm extends React.Component {
 
   makeCheckBoxes() {
     return this.props.categories.map(category => {
-      return <RadioButton item={category} handleChange={this.props.onCategoryChange} key={category.id}/>
-    })
+      return <RadioButton item={category} handleChange={this.props.onCategoryChange} key={category.id}/>;
+    });
   }
 
   render() {

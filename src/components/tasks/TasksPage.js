@@ -14,7 +14,7 @@ mapCategoryToTask(tasks, categories){
   tasks.map(task => task.category = 
     categories.filter(cat => cat.id == task.category_ids[0])[0].description
   );
-};
+}
 
   render() {
     const tasks = this.props.tasks;

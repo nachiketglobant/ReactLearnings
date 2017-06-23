@@ -66,7 +66,7 @@ class TaskPage extends React.Component {
   } 
 
   deleteTask(event) {
-    this.props.actions.deleteTask(this.state.task)
+    this.props.actions.deleteTask(this.state.task);
   }
 
   render() {
@@ -82,7 +82,7 @@ class TaskPage extends React.Component {
           onCategoryChange={this.updateTaskCategories}
           saving={this.state.saving}/> 
       </div>
-      )
+      );
     }
     return (
       <div className="col-md-8 col-md-offset-2">
@@ -105,8 +105,8 @@ TaskPage.propTypes = {
 };
 
 function getCatById(tasks, id) {
-  let task = tasks.find(task => task.id == id)
-  return Object.assign({}, task)
+  let task = tasks.find(task => task.id == id);
+  return Object.assign({}, task);
 }
 
 function categoriesForCheckBoxes(categories, task=null) {
@@ -121,7 +121,7 @@ function categoriesForCheckBoxes(categories, task=null) {
 }
 
 function mapStateToProps(state, ownProps) {
-  const stateCategories = Object.assign([], state.categories)
+  const stateCategories = Object.assign([], state.categories);
   let checkBoxCategories = [];
   let task = {id: '', description: '', category: '', assignedto: '', length : '', category_ids: [] };
   const catId = ownProps.params.id;
@@ -133,7 +133,7 @@ function mapStateToProps(state, ownProps) {
     ) {
       checkBoxCategories = categoriesForCheckBoxes(stateCategories, task);
     } else {
-      checkBoxCategories = categoriesForCheckBoxes(stateCategories)
+      checkBoxCategories = categoriesForCheckBoxes(stateCategories);
     }
   } 
     return {task: task, checkBoxCategories: checkBoxCategories};

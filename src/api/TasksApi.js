@@ -11,7 +11,7 @@ class TasksApi {
 
   static updateTask(task) {
     return task;
-  };
+  }
 
   static createTask(task) {
     taskJson.push({
@@ -22,7 +22,7 @@ class TasksApi {
       "assignedto": task.assignedto
     });
     return taskJson[taskJson.length - 1];
-  };
+  }
 
   static deleteTask(task) {
   return task;
