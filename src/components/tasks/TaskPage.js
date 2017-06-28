@@ -21,7 +21,6 @@ class TaskPage extends React.Component {
     this.updateTaskCategories = this.updateTaskCategories.bind(this);
     this.toggleEdit = this.toggleEdit.bind(this);
     this.deleteTask = this.deleteTask.bind(this);
-    this.redirect = this.redirect.bind(this);
   }
 
 
@@ -98,12 +97,6 @@ class TaskPage extends React.Component {
 }
 
 
-TaskPage.propTypes = {
-  task: PropTypes.object.isRequired,
-  checkBoxCategories: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
-};
-
 function getCatById(tasks, id) {
   let task = tasks.find(task => task.id == id);
   return Object.assign({}, task);
@@ -144,4 +137,11 @@ function mapDispatchToProps(dispatch) {
     actions: bindActionCreators(taskActions, dispatch)
   };
 }
+
+TaskPage.propTypes = {
+  task: PropTypes.object.isRequired,
+  checkBoxCategories: PropTypes.array.isRequired,
+  actions: PropTypes.object.isRequired
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(TaskPage);

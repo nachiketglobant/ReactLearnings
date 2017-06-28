@@ -5,10 +5,11 @@ import TaskPage from './TaskPage';
 const TaskListRow = ({task}) => {
   return (
     <tr>
-      <td><Link to={'/tasks/' + task.id}>{task.description}</Link></td>
-      <td><Link to={'/tasks/' + task.id}>{task.length}</Link></td>
-      <td><Link to={'/tasks/' + task.id}>{task.category}</Link></td>
-      <td><Link to={'/tasks/' + task.id}>{task.assignedto}</Link></td>
+      <td>{task.description}</td>
+      <td>{task.length}</td>
+      <td>{task.category}</td>
+      <td>{task.assignedto}</td>
+      <td><Link to={'/tasks/' + task.id}>Select</Link></td>
     </tr>
   );
 };

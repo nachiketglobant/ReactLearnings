@@ -70,13 +70,6 @@ function categoriesForCheckBoxes(categories) {
   });
 }
 
-NewTaskPage.propTypes = {
-  checkBoxCategories: PropTypes.array.isRequired, 
-  actions: PropTypes.object.isRequired
-};
-
-
-
 function mapStateToProps(state, ownProps) {
   let checkBoxCategories = [];
   if (state.categories.length > 0) {
@@ -93,6 +86,11 @@ function mapDispatchToProps(dispatch) {
     actions: bindActionCreators(courseActions, dispatch)
   };
 }
+
+NewTaskPage.propTypes = {
+  checkBoxCategories: PropTypes.array.isRequired, 
+  actions: PropTypes.object.isRequired
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewTaskPage);

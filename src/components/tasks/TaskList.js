@@ -10,6 +10,7 @@ const TaskList = ({tasks}) => {
           <th>Length</th>
           <th>Category</th>
           <th>Assigned To</th>
+          <th>Select</th>
         </tr>
       </thead>
       <tbody>
